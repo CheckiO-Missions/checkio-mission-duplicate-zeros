@@ -2,7 +2,7 @@
 {% block env %}import assert from "assert";{% endblock env %}
 
 {% block start %}
-function duplicateZeros(donuts: array): array {
+function duplicateZeros(donuts: number[]): number[] {
     // your code here
     return [];
 }
@@ -10,7 +10,7 @@ function duplicateZeros(donuts: array): array {
 
 {% block example %}
 console.log('Example:');
-console.log(JSON.stringify(duplicateZeros([1,0,2,3,0,4,5,0])))
+console.log(JSON.stringify(duplicateZeros([1, 0, 2, 3, 0, 4, 5, 0])))
 {% endblock %}
 
 // These "asserts" are used for self-checking

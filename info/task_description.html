@@ -1,22 +1,33 @@
-<p><i>"Sometimes, zeros resemble very tasty donuts. And every time we finish a donut, we want another,
-    and then another, and then another..."</i></p>
-
 <p>
-    You are given a list of integers. Your task in this mission is to double all the zeros in the given list (think about donuts ;-P).
+    <i>
+        "Sometimes, zeros resemble very tasty donuts. And every time we finish a donut, we want another, and then another, and then another..."
+    </i>
 </p>
-
-
 <p>
-    <strong>Input: </strong>{% if is_js %}Array{% else %}List{% endif %}.
-
-<p>
-    <strong>Output: </strong>{% if is_js %}Array{% else %}List{% endif %}.
+    You are given {% if is_js %}an Array of numbers{% else %}a list of integers{% endif %}. Your task in this mission is to duplicate (..., 0, ... --> ..., 0, 0, ...) all zeros (think about donuts ;-P). Let's look on the example:
 </p>
-
+<p>
+    <pre class="brush: python">
+donuts = [1, 0, 2, 0]
+print(list(duplicate_zeros(donuts)))
+    </pre>
+    <div class="output">
+        <p>Output:</p>
+        <pre>
+[1, 0, 0, 2, 0, 0]
+        </pre>
+    </div>
+</p>
+<p>
+    <strong>Input:</strong>{% if is_js %}An Array of numbers{% else %}A List of integers{% endif %}.
+</p>
+<p>
+    <strong>Output:</strong>{% if is_js %}An Array of numbers{% else %}A List on another Iterable (tuple, generator, iterator) of integers{% endif %}.
+</p>
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Examples:</strong>
     </p>
-<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 <p><i>If you have solved this mission, you can enjoy a donut with peace of mind!=)</i></p>
