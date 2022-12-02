@@ -7,16 +7,9 @@
     You are given {% if is_js %}an Array of numbers{% else %}a list of integers{% endif %}. Your task in this mission is to duplicate (<b class="code">..., 🍩, ... --> ..., 🍩, 🍩, ...</b>) all zeros (think about donuts ;-P) and return the result as any Iterable. Let's look on the example:
 </p>
 <p>
-    <pre class="brush: python">
-donuts: list[int] = [1, 0, 2, 0]
-print(list(duplicate_zeros(donuts)))
+    <pre>
+[1, 0, 2, 0] -> [1, 0, 0, 2, 0, 0]
     </pre>
-    <div class="output">
-        <p><b>Output:</b></p>
-        <pre>
-[1, 0, 0, 2, 0, 0]
-        </pre>
-    </div>
 </p>
 <p>
     <strong>Input:</strong> {% if is_js %}An Array of numbers{% else %}A List of integers{% endif %}.
