@@ -79,7 +79,7 @@ if not don:
         </p>
         <p>Here is the whole solution:</p>
         <pre class="brush: python">
-from typing import Iterable
+from collections.abc import Iterable
 
 
 def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
@@ -104,7 +104,7 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
             Using <b class="code">yield from</b> allows us to avoid creating a new resulted list, it "sends" each element from the small list outside the function. If the element equals <b class="code">0</b>, it sends two of them.
         </p>
         <pre class="brush: python">
-from typing import Iterable
+from collections.abc import Iterable
 
 
 def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
@@ -116,7 +116,7 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
             Recursive version: return an empty list (if there is no initial list) or first element in list (twice if necessary), than repeat for the smaller initial list. Join all these lists together.
         </p>
         <pre class="brush: python">
-from typing import Iterable
+from collections.abc import Iterable
 
 
 def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
