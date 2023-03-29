@@ -78,6 +78,7 @@ if not don:
             You just need to wrap your code into function expression and join all previous hints together.
         </p>
         <p>Here is the whole solution:</p>
+        <div class="spoiler">
         <pre class="brush: python">
 from collections.abc import Iterable
 
@@ -91,6 +92,7 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
             res.append(don)
     return res
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -103,6 +105,7 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
         <p>
             Using <b class="code">yield from</b> allows us to avoid creating a new resulted list, it "sends" each element from the small list outside the function. If the element equals <b class="code">0</b>, it sends two of them.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 from collections.abc import Iterable
 
@@ -112,9 +115,11 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
     for don in donuts:
         yield from [don] * (2-bool(don))
         </pre>
+        </div>
         <p>
             Recursive version: return an empty list (if there is no initial list) or first element in list (twice if necessary), than repeat for the smaller initial list. Join all these lists together.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 from collections.abc import Iterable
 
@@ -128,6 +133,7 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
     return [donuts[0]] + [0] * (donuts[0] == 0) + duplicate_zeros(donuts[1:])
 
         </pre>
+        </div>
         <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
     </div>
 </div>
