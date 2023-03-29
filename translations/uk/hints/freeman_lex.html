@@ -78,6 +78,7 @@ if not don:
             Тобі просто потрібно обгорнути свій код у вираз функції та з'єднати всі попередні підказки разом.
         </p>
         <p>Ось повний розв'язок:</p>
+        <div class="spoiler">
         <pre class="brush: python">
 from collections.abc import Iterable
 
@@ -91,6 +92,7 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
             res.append(don)
     return res
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -103,6 +105,7 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
         <p>
             Використання <b class="code">yield from</b> дозволяє нам уникнути створення нового результатного списку, натомість кожен елемент з маленького списку "відправляється" з функції. Якщо елемент дорівнює <b class="code">0</b>, в списку їх двоє.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 from collections.abc import Iterable
 
@@ -112,9 +115,11 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
     for don in donuts:
         yield from [don] * (2-bool(don))
         </pre>
+        </div>
         <p>
             Рекурсивна версія: повертається порожній список (якщо немає вхідного списку) або перший елемент зі списку (двічі якщо потрібно), тоді повторюється для меншого початкового списку. Всі списки з'єднуються разом.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 from collections.abc import Iterable
 
@@ -128,6 +133,7 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
     return [donuts[0]] + [0] * (donuts[0] == 0) + duplicate_zeros(donuts[1:])
 
         </pre>
+        </div>
         <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
     </div>
 </div>
