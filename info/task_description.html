@@ -4,7 +4,7 @@
     </i>
 </p>
 <p>
-    You are given {% if is_js %}an <span translate="repeat">array</span> of <span translate="repeat">numbers</span>{% else %}a <span translate="repeat">list</span> of <span translate="repeat">integers</span>{% endif %}. Your task in this mission is to duplicate (<b class="code">..., 🍩, ... --> ..., 🍩, 🍩, ...</b>) all zeros (think about donuts ;-P) and return the result as any <span translate="repeat">Iterable</span>. Let's look on the example:
+    You are given <span translate="repeat">{% if is_js %}array{% else %}list{% endif %}</span> of integers <span translate="no">{% if is_js %}(number){% else %}(int){% endif %}</span>. Your task in this mission is to duplicate (<b class="code">..., 🍩, ... --> ..., 🍩, 🍩, ...</b>) all zeros (think about donuts ;-P) and return the result as any <span translate="repeat">Iterable</span>. Let's look on the example:
 </p>
 <p>
     <pre>
@@ -12,10 +12,10 @@
     </pre>
 </p>
 <p>
-    <strong>Input:</strong> {% if is_js %}An <span translate="repeat">array</span> of <span translate="repeat">numbers</span>{% else %}A <span translate="repeat">list</span> of <span translate="repeat">integers</span>{% endif %}.
+    <strong>Input:</strong> <span translate="repeat">{% if is_js %}Array{% else %}List{% endif %}</span> of integers <span translate="no">{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 <p>
-    <strong>Output:</strong> {% if is_js %}An <span translate="repeat">array</span> of <span translate="repeat">numbers</span>{% else %}A <span translate="repeat">list</span> on another <span translate="repeat">Iterable</span> (<span translate="repeat">tuple</span>, <span translate="repeat">generator</span>, <span translate="repeat">iterator</span>) of <span translate="repeat">integers</span>{% endif %}.
+    <strong>Output:</strong> {% if is_js %}An <span translate="repeat">array</span> of integers <span translate="no">(number)</span>{% else %}A <span translate="repeat">list</span> on another <span translate="repeat">Iterable</span> (<span translate="repeat">tuple</span>, <span translate="repeat">generator</span>, <span translate="repeat">iterator</span>) of integers <span translate="no">(int)</span>{% endif %}.
 </p>
 <div class="for_info_only">
     <p>
