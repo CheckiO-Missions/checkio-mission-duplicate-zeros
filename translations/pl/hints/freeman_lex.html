@@ -1,0 +1,148 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Nie mam pojęcia, jak zacząć rozwiązywać tę misję.</p>
+    </div>
+    <div class="answer">
+        <p>
+            pomysł jest prosty: iterować po początkowej liście, pobierając element po elemencie do nowej listy. Jeśli pobrany element jest równy <b class="code">0</b> - proszę dodać jeden <b class="code">0</b> więcej do nowej listy, a następnie przejść do następnego elementu z początkowej listy. 
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, od czego powinienem zacząć?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Zadeklarujmy nową zmienną <b class="code">res</b> z początkową wartością pustej listy. To jest Pana nowa lista, na której będzie Pan umieszczał elementy i tę nową listę funkcja powinna zwrócić na końcu.
+        </p>
+        <pre class="brush: python">
+res = []
+...
+return res
+        </pre>
+        <p>
+            Proszę użyć <a target="_blank" href="https://www.w3schools.com/python/python_for_loops.asp">for loop</a> do iteracji po elementach <b class="code">don</b> początkowej listy. 
+        </p>
+        <pre class="brush: python">
+for don in donuts:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Co powinienem zrobić z każdym elementem <b class="code">don</b> wewnątrz pętli?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Jak już wspomniałem, zawsze musi Pan dodać element do nowej listy <b class="code">res</b>. Ponieważ nowa lista powinna zawierać wszystkie elementy listy początkowej.
+            W tym celu proszę użyć metody listy <a target="_blank" href="https://www.w3schools.com/python/ref_list_append.asp">append()</a>.
+        </p>
+        <pre class="brush: python">
+res.append(don)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok, co zrobić, jeśli bieżący element jest równy <b class="code">0</b>?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Najpierw, po dołączeniu do nowej listy, należy sprawdzić każdy element pod kątem równości <b class="code">0</b>. Proszę to zrobić z <a target="_blank" href="https://www.w3schools.com/python/gloss_python_if_statement.asp">if statement</a> i <a target="_blank" href="https://www.w3schools.com/python/python_operators.asp">== (equal) operator</a>.
+        </p>
+        <pre class="brush: python">
+if don == 0:
+    ...
+# or just
+if not don:
+    ...
+        </pre>
+        <p>
+            Jeśli warunek jest spełniony <b class="code">True</b>, proszę dodać <b class="code">don</b> (który jest równy <b class="code">0</b>) do <b class="code">res</b> więcej! I już Pan wie jak)
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jak więc powinno wyglądać moje ostateczne rozwiązanie?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Wystarczy zawinąć kod w wyrażenie funkcyjne i połączyć wszystkie poprzednie wskazówki razem.
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+from collections.abc import Iterable
+
+
+def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
+    
+    res = []
+    for don in donuts:
+        res.append(don)
+        if not don:
+            res.append(don)
+    return res
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwą 🥇 Python Ninnjaa!</p>
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę łapać!</p>
+        <p>
+            Użycie <b class="code">yield from</b> pozwala nam uniknąć tworzenia nowej listy wyników, "wysyła" każdy element z małej listy poza funkcję. Jeśli element jest równy <b class="code">0</b>, wysyła dwa z nich.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+from collections.abc import Iterable
+
+
+def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
+
+    for don in donuts:
+        yield from [don] * (2-bool(don))
+        </pre>
+        </div>
+        <p>
+            Wersja rekursywna: zwróć pustą listę (jeśli nie ma listy początkowej) lub pierwszy element listy (dwa razy, jeśli to konieczne), a następnie powtórz dla mniejszej listy początkowej. Proszę połączyć wszystkie te listy.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+from collections.abc import Iterable
+
+
+def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
+
+    if not donuts:
+
+        return []
+
+    return [donuts[0]] + [0] * (donuts[0] == 0) + duplicate_zeros(donuts[1:])
+
+        </pre>
+        </div>
+        <p>Proszę kliknąć <b>Best solutions</b> w menu misji i zobaczyć wiele innych ciekawych rozwiązań!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa jak należy!</p>
+    </div>
+    <div class="answer">
+        miło mi to słyszeć!
+    </div>
+</div>
+</body>

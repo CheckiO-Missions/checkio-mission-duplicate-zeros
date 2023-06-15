@@ -1,0 +1,26 @@
+<p>
+    <i>
+        "Czasami zera przypominają bardzo smaczne pączki. I za każdym razem, gdy kończymy pączka, chcemy kolejnego, a potem jeszcze jednego, a potem jeszcze jednego..."
+    </i>
+</p>
+<p>
+    Otrzymuje Pan tablicę {% if is_js %}{% else %} listę{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> liczb całkowitych <span>{% if is_js %}(number){% else %}(int){% endif %}</span>. Pana zadaniem w tej misji jest powielenie (<b class="code">..., 🍩, ... --> ..., 🍩, 🍩, ...</b>) wszystkich zer (proszę pomyśleć o pączkach;-P) i zwrócenie wyniku jako dowolnego Iterable. Proszę spojrzeć na przykład:
+</p>
+<p>
+    <pre>
+[1, 0, 2, 0] -> [1, 0, 0, 2, 0, 0]
+    </pre>
+</p>
+<p>
+   <strong>Wejście:</strong> {% if is_js %}Tablica{% else %}Lista{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> liczb całkowitych <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
+</p>
+<p>
+   <strong>Dane wyjściowe:</strong> {% if is_js %}Tablica <span>(array)</span> liczb całkowitych <span>(number)</span>{% else %} Lista <span>(list)</span> na innym Iterable (krotka <span>(tuple)</span>, generator, iterator) liczb całkowitych <span>(int)</span>{% endif %}.
+</p>
+<div class="for_info_only">
+    <p>
+        <strong>Przykłady:</strong>
+    </p>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+<p><i>Jeśli rozwiązali Państwo tę misję, mogą Państwo ze spokojem 🍩! =)</i></p>
