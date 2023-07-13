@@ -1,0 +1,26 @@
+<p>
+    <i>
+        "有时候，零就像美味的甜甜圈。每次我们吃完一个甜甜圈，就想再吃一个，再吃一个，再吃一个......"
+    </i>
+</p>
+<p>
+    给你{% if is_js %}数组{% else %}列表{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span>的整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.在这个任务中你的任务是复制(<b class="code">..., 🍩, ... --> ..., 🍩, 🍩, ...</b>)所有的零(想想甜甜圈;-P)并返回结果为任何可迭代的<span>(Iterable)</span> 。让我们看一下示例：
+</p>
+<p>
+    <pre>
+[1, 0, 2, 0] -> [1, 0, 0, 2, 0, 0]
+    </pre>
+</p>
+<p>
+   <strong>输入</strong> {% if is_js %}数组{% else %}列表{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span>的整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
+</p>
+<p>
+   <strong>输出：</strong> {% if is_js %}一个整数数组<span>(array)</span> <span>(number)</span> {% else %} 一个列表<span>(list)</span> on another Iterable<span>(Iterable)</span> (tuple<span>(tuple)</span>, generator<span>(generator)</span>, iterator<span>(iterator)</span>) of integers<span>(int)</span>{% endif %}.
+</p>
+<div class="for_info_only">
+    <p>
+        <strong>举例说明：</strong>
+    </p>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+<p><i>如果你已经解决了这个任务，你就可以安心地享受🍩了！=)</i></p>
