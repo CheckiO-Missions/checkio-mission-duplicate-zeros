@@ -1,0 +1,27 @@
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    <i>
+        "Manchmal ähneln Nullen sehr leckeren Donuts. Und jedes Mal, wenn wir einen Donut aufessen, wollen wir noch einen, und dann noch einen, und dann noch einen..."
+    </i>
+</p>
+<p>
+    Sie erhalten {% if is_js %}Array{% else %}Liste{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> von ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span>. Ihre Aufgabe in dieser Mission ist es, alle Nullen zu verdoppeln (<b class="code">..., 🍩, ... --> ..., 🍩, 🍩, ...</b>) (denken Sie an Donuts;-P) und das Ergebnis als beliebiges Iterable zurückzugeben. Schauen wir uns das Beispiel an:
+</p>
+<p>
+    <pre>
+[1, 0, 2, 0] -> [1, 0, 0, 2, 0, 0]
+    </pre>
+</p>
+<p>
+   <strong>Eingabe:</strong> {% if is_js %}Array{% else %}Liste{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> von ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
+</p>
+<p>
+   <strong>Ausgabe:</strong> {% if is_js %}Ein Array <span>(array)</span> von ganzen Zahlen <span>(number)</span>{% else %} Eine Liste <span>(list)</span> auf ein anderes Iterable (Tupel <span>(tuple)</span>, Generator <span>(generator)</span>, Iterator <span>(iterator)</span>) von ganzen Zahlen <span>(int)</span>{% endif %}.
+</p>
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+<p><i>Wenn Sie diese Aufgabe gelöst haben, können Sie ein 🍩 mit ruhigem Gewissen genießen!=)</i></p>
