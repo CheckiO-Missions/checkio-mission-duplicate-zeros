@@ -7,10 +7,8 @@
 <p>
     Sie erhalten {% if is_js %}Array{% else %}Liste{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> von ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span>. Ihre Aufgabe in dieser Mission ist es, alle Nullen zu verdoppeln (<b class="code">..., 🍩, ... --> ..., 🍩, 🍩, ...</b>) (denken Sie an Donuts;-P) und das Ergebnis als beliebiges Iterable zurückzugeben. Schauen wir uns das Beispiel an:
 </p>
-<p>
-    <pre>
-[1, 0, 2, 0] -> [1, 0, 0, 2, 0, 0]
-    </pre>
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}duplicate-zeros.svg" alt="example" style="max-height: 200px"/>
 </p>
 <p>
    <strong>Eingabe:</strong> {% if is_js %}Array{% else %}Liste{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> von ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
